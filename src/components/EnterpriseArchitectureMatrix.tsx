@@ -1,3 +1,13 @@
+import {
+  CheckCircle2,
+  Zap,
+  ShieldCheck,
+  ArrowUpDown,
+  Cpu,
+  Layers,
+  Network,
+} from "lucide-react";
+
 export default function EnterpriseArchitectureMatrix() {
   return (
     <section
@@ -23,9 +33,7 @@ export default function EnterpriseArchitectureMatrix() {
 
             <div className="flex flex-col gap-3 mt-2">
               <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-xs">
-                <span className="material-symbols-outlined text-primary text-[28px] shrink-0">
-                  verified
-                </span>
+                <CheckCircle2 className="w-7 h-7 text-primary shrink-0" />
                 <div>
                   <strong className="text-sm font-bold text-slate-900 block">
                     Single Responsible Entity
@@ -37,9 +45,7 @@ export default function EnterpriseArchitectureMatrix() {
               </div>
 
               <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-xs">
-                <span className="material-symbols-outlined text-primary text-[28px] shrink-0">
-                  speed
-                </span>
+                <Zap className="w-7 h-7 text-primary shrink-0" />
                 <div>
                   <strong className="text-sm font-bold text-slate-900 block">
                     Rapid Incident Remediation
@@ -74,9 +80,7 @@ export default function EnterpriseArchitectureMatrix() {
               <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-tertiary shrink-0">
-                    <span className="material-symbols-outlined text-[26px]">
-                      shield_with_heart
-                    </span>
+                    <ShieldCheck className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-xs text-tertiary uppercase font-bold block">
@@ -97,14 +101,14 @@ export default function EnterpriseArchitectureMatrix() {
 
               {/* Inter-layer Bridge Line */}
               <div className="flex justify-center -my-2 text-slate-400">
-                <span className="material-symbols-outlined text-[20px]">sync_alt</span>
+                <ArrowUpDown className="w-4 h-4" />
               </div>
 
               {/* Layer 2: Core ICT Infrastructure */}
               <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-primary shrink-0">
-                    <span className="material-symbols-outlined text-[26px]">router</span>
+                    <Network className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-xs text-primary uppercase font-bold block">
@@ -125,14 +129,14 @@ export default function EnterpriseArchitectureMatrix() {
 
               {/* Inter-layer Bridge Line */}
               <div className="flex justify-center -my-2 text-slate-400">
-                <span className="material-symbols-outlined text-[20px]">sync_alt</span>
+                <ArrowUpDown className="w-4 h-4" />
               </div>
 
               {/* Layer 1: Smart Physical Infrastructure */}
               <div className="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 shrink-0">
-                    <span className="material-symbols-outlined text-[26px]">cable</span>
+                    <Layers className="w-6 h-6" />
                   </div>
                   <div>
                     <span className="text-xs text-slate-700 uppercase font-bold block">

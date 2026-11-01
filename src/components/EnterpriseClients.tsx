@@ -1,11 +1,20 @@
+import {
+  Landmark,
+  Building2,
+  RadioTower,
+  Hospital,
+  Plane,
+  Hotel,
+} from "lucide-react";
+
 export default function EnterpriseClients() {
   const clients = [
-    { label: "FINTECH GCC", icon: "account_balance" },
-    { label: "GOV ENTITY", icon: "policy" },
-    { label: "TELECOM HQ", icon: "cell_tower" },
-    { label: "HEALTHCARE", icon: "local_hospital" },
-    { label: "AVIATION", icon: "flight_takeoff" },
-    { label: "HOSPITALITY", icon: "hotel" },
+    { label: "FINTECH GCC", icon: Landmark },
+    { label: "GOV ENTITY", icon: Building2 },
+    { label: "TELECOM HQ", icon: RadioTower },
+    { label: "HEALTHCARE", icon: Hospital },
+    { label: "AVIATION", icon: Plane },
+    { label: "HOSPITALITY", icon: Hotel },
   ];
 
   return (
@@ -31,19 +40,20 @@ export default function EnterpriseClients() {
 
         {/* Clients Strip */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4">
-          {clients.map((client) => (
-            <div
-              key={client.label}
-              className="h-24 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center p-3 text-center hover:bg-white hover:border-primary/40 hover:shadow-md transition-all group"
-            >
-              <span className="material-symbols-outlined text-slate-400 group-hover:text-primary text-[24px] mb-1 transition-colors">
-                {client.icon}
-              </span>
-              <span className="text-xs sm:text-sm tracking-wider text-slate-700 uppercase font-bold group-hover:text-slate-900 transition-colors">
-                {client.label}
-              </span>
-            </div>
-          ))}
+          {clients.map((client) => {
+            const Icon = client.icon;
+            return (
+              <div
+                key={client.label}
+                className="h-24 rounded-xl bg-slate-50 border border-slate-200 flex flex-col items-center justify-center p-3 text-center hover:bg-white hover:border-primary/40 hover:shadow-md transition-all group"
+              >
+                <Icon className="w-6 h-6 text-slate-400 group-hover:text-primary mb-1.5 transition-colors" />
+                <span className="text-xs sm:text-sm tracking-wider text-slate-700 uppercase font-bold group-hover:text-slate-900 transition-colors">
+                  {client.label}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

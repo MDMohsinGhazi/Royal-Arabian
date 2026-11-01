@@ -1,5 +1,14 @@
 "use client";
 
+import {
+  Building,
+  Phone,
+  Mail,
+  Headphones,
+  CheckCircle2,
+  Send,
+  RefreshCw,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface EnterpriseConsultationModuleProps {
@@ -10,12 +19,6 @@ export default function EnterpriseConsultationModule({
   selectedDivision = "ict",
 }: EnterpriseConsultationModuleProps) {
   const [division, setDivision] = useState<"ict" | "cyber" | "smart">(selectedDivision);
-
-  useEffect(() => {
-    if (selectedDivision) {
-      setDivision(selectedDivision);
-    }
-  }, [selectedDivision]);
   const [formData, setFormData] = useState({
     name: "",
     org: "",
@@ -25,6 +28,12 @@ export default function EnterpriseConsultationModule({
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [refId, setRefId] = useState("");
+
+  useEffect(() => {
+    if (selectedDivision) {
+      setDivision(selectedDivision);
+    }
+  }, [selectedDivision]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,7 +77,7 @@ export default function EnterpriseConsultationModule({
                 {/* Regional HQ */}
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
                   <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-primary shrink-0">
-                    <span className="material-symbols-outlined text-[20px]">apartment</span>
+                    <Building className="w-5 h-5" />
                   </div>
                   <div>
                     <strong className="text-sm font-bold text-slate-900 block">
@@ -83,7 +92,7 @@ export default function EnterpriseConsultationModule({
                 {/* Direct Telephony */}
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
                   <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-primary shrink-0">
-                    <span className="material-symbols-outlined text-[20px]">call</span>
+                    <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <strong className="text-sm font-bold text-slate-900 block">
@@ -107,9 +116,7 @@ export default function EnterpriseConsultationModule({
                 {/* Email */}
                 <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-xs">
                   <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-primary shrink-0">
-                    <span className="material-symbols-outlined text-[20px]">
-                      mark_email_read
-                    </span>
+                    <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <strong className="text-sm font-bold text-slate-900 block">
@@ -127,9 +134,7 @@ export default function EnterpriseConsultationModule({
             </div>
 
             <div className="mt-8 p-4 rounded-xl bg-orange-50 border border-orange-200 flex items-center gap-4">
-              <span className="material-symbols-outlined text-primary text-[28px] shrink-0">
-                support_agent
-              </span>
+              <Headphones className="w-7 h-7 text-primary shrink-0" />
               <div>
                 <span className="text-xs sm:text-sm font-bold text-slate-900 block">
                   24/7 Mission-Critical Support Desk
@@ -153,7 +158,7 @@ export default function EnterpriseConsultationModule({
             {status === "success" ? (
               <div className="py-8 flex flex-col items-center text-center space-y-4">
                 <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[36px]">check_circle</span>
+                  <CheckCircle2 className="w-9 h-9" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-900">
@@ -318,15 +323,13 @@ export default function EnterpriseConsultationModule({
                 >
                   {status === "submitting" ? (
                     <>
-                      <span className="material-symbols-outlined text-[20px] animate-spin">
-                        refresh
-                      </span>
+                      <RefreshCw className="w-5 h-5 animate-spin" />
                       <span>Transmitting Consultation Scope...</span>
                     </>
                   ) : (
                     <>
                       <span>Submit for Executive Technical Review</span>
-                      <span className="material-symbols-outlined text-[20px]">send</span>
+                      <Send className="w-4 h-4" />
                     </>
                   )}
                 </button>

@@ -1,3 +1,5 @@
+import { CheckCircle2 } from "lucide-react";
+
 export default function EnterpriseTelemetryRibbon() {
   return (
     <section className="w-full bg-slate-100 border-b border-slate-200 py-2.5 px-4 sm:px-6 lg:px-8">
@@ -17,15 +19,11 @@ export default function EnterpriseTelemetryRibbon() {
 
         <div className="flex items-center gap-4 sm:gap-6 text-slate-600 font-medium">
           <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-[15px] text-emerald-600">
-              verified
-            </span>
+            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             <span>ISO 27001 Certified</span>
           </span>
           <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-[15px] text-emerald-600">
-              verified
-            </span>
+            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             <span>SIRA Certified Security</span>
           </span>
           <span className="text-primary font-bold">Tier-IV Compliant</span>

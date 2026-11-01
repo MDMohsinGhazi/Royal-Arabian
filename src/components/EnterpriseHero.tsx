@@ -1,3 +1,5 @@
+import { ArrowDown, Sliders } from "lucide-react";
+
 export default function EnterpriseHero() {
   return (
     <section
@@ -39,14 +41,14 @@ export default function EnterpriseHero() {
             className="inline-flex items-center justify-center gap-2 text-sm font-semibold px-6 py-3 rounded-lg bg-primary text-white hover:bg-amber-active hover:shadow-md transition-all duration-200 shadow-sm"
           >
             <span>Explore Enterprise Divisions</span>
-            <span className="material-symbols-outlined text-[18px]">south</span>
+            <ArrowDown className="w-4 h-4" />
           </a>
 
           <a
             href="#architecture-matrix"
             className="inline-flex items-center justify-center gap-2 text-sm font-semibold px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-800 hover:bg-slate-50 hover:border-slate-400 hover:text-primary transition-all duration-200 shadow-sm"
           >
-            <span className="material-symbols-outlined text-[18px] text-primary">tune</span>
+            <Sliders className="w-4 h-4 text-primary" />
             <span>Unified Architecture Matrix</span>
           </a>
         </div>

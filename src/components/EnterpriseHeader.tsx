@@ -1,5 +1,16 @@
 "use client";
 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Menu,
+  X,
+  Network,
+  ArrowUpRight,
+  ChevronRight,
+  AlertTriangle,
+} from "lucide-react";
 import { useState } from "react";
 
 interface EnterpriseHeaderProps {
@@ -29,7 +40,8 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
       isExternal: true,
       badge: "Portal",
     },
-   
+    { label: "Architecture", href: "#architecture-matrix", isExternal: false },
+    { label: "Clients", href: "#enterprise-clients", isExternal: false },
     { label: "Contact Us", href: "#quick-inquiry", isExternal: false },
   ];
 
@@ -44,20 +56,18 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                 href="tel:+97126212354"
                 className="flex items-center gap-1.5 hover:text-slate-900 transition-colors"
               >
-                <span className="material-symbols-outlined text-[14px] text-primary">call</span>
+                <Phone className="w-3.5 h-3.5 text-primary" />
                 <span className="font-medium">+971 2 6212354</span>
               </a>
               <a
                 href="mailto:info@arabiancomputers.com"
                 className="hidden md:flex items-center gap-1.5 hover:text-slate-900 transition-colors"
               >
-                <span className="material-symbols-outlined text-[14px] text-primary">mail</span>
+                <Mail className="w-3.5 h-3.5 text-primary" />
                 <span className="font-medium">info@arabiancomputers.com</span>
               </a>
               <span className="hidden xl:flex items-center gap-1.5 text-slate-600">
-                <span className="material-symbols-outlined text-[14px] text-primary">
-                  location_on
-                </span>
+                <MapPin className="w-3.5 h-3.5 text-primary" />
                 <span className="font-medium">Abu Dhabi, UAE</span>
               </span>
             </div>
@@ -90,11 +100,18 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                 aria-label="Toggle mobile menu"
                 className="xl:hidden w-10 h-10 rounded-lg flex items-center justify-center text-slate-700 hover:bg-slate-100"
               >
-                <span className="material-symbols-outlined text-[24px]">menu</span>
+                <Menu className="w-6 h-6" />
               </button>
 
               <a href="#overview" className="flex items-center gap-3 group">
-                
+                <div className="h-10 px-2.5 py-1 rounded-lg bg-slate-900 flex items-center justify-center shadow-sm">
+                  <div className="flex items-center gap-1.5">
+                    <Network className="w-5 h-5 text-white" />
+                    <span className="text-white font-extrabold text-sm tracking-widest uppercase">
+                      RACT
+                    </span>
+                  </div>
+                </div>
                 <div className="flex flex-col">
                   <span className="text-lg text-slate-900 tracking-tight leading-none font-bold group-hover:text-primary transition-colors">
                     Royal Arabian
@@ -124,9 +141,7 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                   >
                     <span>{link.label}</span>
                     {link.isExternal && (
-                      <span className="material-symbols-outlined text-[14px] text-slate-400 group-hover:text-primary">
-                        arrow_outward
-                      </span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary" />
                     )}
                   </a>
                 );
@@ -142,7 +157,13 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                 Request SLA Proposal
               </a>
 
-            
+              <a
+                href="tel:+971544443635"
+                title="24/7 Field Hotline: +971 54 4443635"
+                className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-orange-50 hover:text-primary transition-colors shadow-inner"
+              >
+                <AlertTriangle className="w-4 h-4 text-primary" />
+              </a>
             </div>
           </div>
         </div>
@@ -161,7 +182,7 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
             <div className="flex items-center justify-between pb-4 border-b border-slate-200">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded bg-slate-900 flex items-center justify-center text-white">
-                  <span className="material-symbols-outlined text-[18px]">hub</span>
+                  <Network className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-primary uppercase">Royal Arabian</div>
@@ -173,7 +194,7 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-100"
               >
-                <span className="material-symbols-outlined text-[20px]">close</span>
+                <X className="w-5 h-5" />
               </button>
             </div>
 
@@ -195,9 +216,11 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
                       </span>
                     )}
                   </div>
-                  <span className="material-symbols-outlined text-slate-400 text-[18px]">
-                    {link.isExternal ? "arrow_outward" : "chevron_right"}
-                  </span>
+                  {link.isExternal ? (
+                    <ArrowUpRight className="w-4 h-4 text-slate-400" />
+                  ) : (
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                  )}
                 </a>
               ))}
             </div>

@@ -1,3 +1,5 @@
+import { ArrowUpRight, Building, Phone, Mail } from "lucide-react";
+
 export default function EnterpriseFooter() {
   return (
     <footer className="w-full bg-slate-900 text-slate-200 border-t border-slate-800">
@@ -39,9 +41,7 @@ export default function EnterpriseFooter() {
                 className="text-slate-300 hover:text-white transition-colors flex items-center justify-between group"
               >
                 <span>ICT Infrastructure Portal</span>
-                <span className="material-symbols-outlined text-[14px] text-slate-500 group-hover:text-primary">
-                  arrow_outward
-                </span>
+                <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-primary transition-colors" />
               </a>
               <a
                 href="https://royalarabiansmart.com/"
@@ -50,9 +50,7 @@ export default function EnterpriseFooter() {
                 className="text-slate-300 hover:text-white transition-colors flex items-center justify-between group"
               >
                 <span>Smart Automation Portal</span>
-                <span className="material-symbols-outlined text-[14px] text-slate-500 group-hover:text-primary">
-                  arrow_outward
-                </span>
+                <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-primary transition-colors" />
               </a>
               <a
                 href="https://royalarabiansmart.com/cybersecurity"
@@ -61,9 +59,7 @@ export default function EnterpriseFooter() {
                 className="text-slate-300 hover:text-white transition-colors flex items-center justify-between group"
               >
                 <span>Cyber Security Portal</span>
-                <span className="material-symbols-outlined text-[14px] text-slate-500 group-hover:text-primary">
-                  arrow_outward
-                </span>
+                <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-primary transition-colors" />
               </a>
               <a
                 href="#architecture-matrix"
@@ -111,21 +107,15 @@ export default function EnterpriseFooter() {
             </span>
             <div className="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-300">
               <div className="flex items-start gap-2">
-                <span className="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">
-                  business
-                </span>
+                <Building className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <span>Al Salam St., Salam HQ Building, P.O. Box 47120, Abu Dhabi, UAE</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px] text-primary shrink-0">
-                  call
-                </span>
+                <Phone className="w-4 h-4 text-primary shrink-0" />
                 <span>+971 2 6212354 / +971 2 6212355</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px] text-primary shrink-0">
-                  mail
-                </span>
+                <Mail className="w-4 h-4 text-primary shrink-0" />
                 <span>info@arabiancomputers.com</span>
               </div>
             </div>

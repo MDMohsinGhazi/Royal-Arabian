@@ -1,5 +1,32 @@
 "use client";
 
+import {
+  Lightbulb,
+  Network,
+  Shield,
+  Building,
+  Radio,
+  Tv,
+  Video,
+  Zap,
+  Brain,
+  Server,
+  Workflow,
+  Wifi,
+  Headphones,
+  Cloud,
+  LifeBuoy,
+  ShieldAlert,
+  Laptop,
+  Radar,
+  Fingerprint,
+  Lock,
+  GraduationCap,
+  ArrowUpRight,
+  FileText,
+  ExternalLink,
+} from "lucide-react";
+
 interface EnterpriseDivisionsProps {
   onSelectDivision?: (division: "smart" | "ict" | "cyber") => void;
 }
@@ -16,16 +43,16 @@ export default function EnterpriseDivisions({ onSelectDivision }: EnterpriseDivi
       portalDomain: "royalarabiansmart.com",
       portalButtonText: "Visit Smart Automation Portal",
       accentColor: "text-primary",
-      icon: "lightbulb",
+      icon: Lightbulb,
       iconBg: "bg-orange-50 border-orange-100 text-primary",
       hoverBorder: "hover:border-orange-300",
       capabilities: [
-        { label: "Smart Building Solutions & BMS", icon: "domain" },
-        { label: "IoT Infrastructure & Smart Automation", icon: "sensors" },
-        { label: "High-End Audio Visual (AV) Systems", icon: "tv" },
-        { label: "CCTV Surveillance & Biometric Access", icon: "videocam" },
-        { label: "Intelligent Energy Management Systems", icon: "bolt" },
-        { label: "Facility AI & Predictive Analytics", icon: "psychology" },
+        { label: "Smart Building Solutions & BMS", icon: Building },
+        { label: "IoT Infrastructure & Smart Automation", icon: Radio },
+        { label: "High-End Audio Visual (AV) Systems", icon: Tv },
+        { label: "CCTV Surveillance & Biometric Access", icon: Video },
+        { label: "Intelligent Energy Management Systems", icon: Zap },
+        { label: "Facility AI & Predictive Analytics", icon: Brain },
       ],
     },
     {
@@ -38,16 +65,16 @@ export default function EnterpriseDivisions({ onSelectDivision }: EnterpriseDivi
       portalDomain: "ict-infra.vercel.app",
       portalButtonText: "Visit ICT Infrastructure Portal",
       accentColor: "text-primary",
-      icon: "hub",
+      icon: Network,
       iconBg: "bg-orange-50 border-orange-100 text-primary",
       hoverBorder: "hover:border-orange-300",
       capabilities: [
-        { label: "Tier-3/4 Data Center & Cloud Architecture", icon: "dns" },
-        { label: "Enterprise Core Switching & Routing", icon: "lan" },
-        { label: "High-Density Wi-Fi 7 & Mobility", icon: "wifi" },
-        { label: "Collaboration & Unified Communications", icon: "headset_mic" },
-        { label: "Microsoft 365 & Azure Cloud Migration", icon: "cloud_done" },
-        { label: "24/7 Managed IT Services & NOC Runbooks", icon: "support_agent" },
+        { label: "Tier-3/4 Data Center & Cloud Architecture", icon: Server },
+        { label: "Enterprise Core Switching & Routing", icon: Workflow },
+        { label: "High-Density Wi-Fi 7 & Mobility", icon: Wifi },
+        { label: "Collaboration & Unified Communications", icon: Headphones },
+        { label: "Microsoft 365 & Azure Cloud Migration", icon: Cloud },
+        { label: "24/7 Managed IT Services & NOC Runbooks", icon: LifeBuoy },
       ],
     },
     {
@@ -60,16 +87,16 @@ export default function EnterpriseDivisions({ onSelectDivision }: EnterpriseDivi
       portalDomain: "royalarabiansmart.com/cybersecurity",
       portalButtonText: "Visit Cyber Defense Portal",
       accentColor: "text-tertiary",
-      icon: "shield",
+      icon: Shield,
       iconBg: "bg-sky-50 border-sky-100 text-tertiary",
       hoverBorder: "hover:border-sky-300",
       capabilities: [
-        { label: "Next-Gen Firewall & Network Defense", icon: "security" },
-        { label: "Endpoint Protection (EDR & XDR)", icon: "laptop_chromebook" },
-        { label: "Managed Detection & Response (MDR)", icon: "radar" },
-        { label: "Identity & Access Management (IAM / PAM)", icon: "fingerprint" },
-        { label: "Data Loss Prevention (DLP) & Privacy", icon: "lock" },
-        { label: "Security Awareness & Simulated Phishing", icon: "school" },
+        { label: "Next-Gen Firewall & Network Defense", icon: ShieldAlert },
+        { label: "Endpoint Protection (EDR & XDR)", icon: Laptop },
+        { label: "Managed Detection & Response (MDR)", icon: Radar },
+        { label: "Identity & Access Management (IAM / PAM)", icon: Fingerprint },
+        { label: "Data Loss Prevention (DLP) & Privacy", icon: Lock },
+        { label: "Security Awareness & Simulated Phishing", icon: GraduationCap },
       ],
     },
   ];
@@ -99,90 +126,90 @@ export default function EnterpriseDivisions({ onSelectDivision }: EnterpriseDivi
           </div>
           <div className="inline-flex items-center gap-1.5 text-slate-600 text-xs bg-white border border-slate-200 px-4 py-2 rounded-lg shadow-xs">
             <span>Specialized Division Portals Active</span>
-            <span className="material-symbols-outlined text-[16px] text-primary">open_in_new</span>
+            <ExternalLink className="w-3.5 h-3.5 text-primary" />
           </div>
         </div>
 
         {/* 3 Divisions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-          {divisions.map((div) => (
-            <div
-              key={div.id}
-              className={`group relative flex flex-col justify-between rounded-2xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-xs transition-all duration-300 hover:shadow-xl ${div.hoverBorder}`}
-            >
-              <div className="flex flex-col">
-                {/* Header row with Icon and External Domain Badge */}
-                <div className="flex items-start justify-between gap-3 mb-6">
-                  <div
-                    className={`w-14 h-14 rounded-2xl border flex items-center justify-center shadow-xs ${div.iconBg}`}
-                  >
-                    <span className="material-symbols-outlined text-[32px]">{div.icon}</span>
+          {divisions.map((div) => {
+            const MainIcon = div.icon;
+            return (
+              <div
+                key={div.id}
+                className={`group relative flex flex-col justify-between rounded-2xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-xs transition-all duration-300 hover:shadow-xl ${div.hoverBorder}`}
+              >
+                <div className="flex flex-col">
+                  {/* Header row with Icon and External Domain Badge */}
+                  <div className="flex items-start justify-between gap-3 mb-6">
+                    <div
+                      className={`w-14 h-14 rounded-2xl border flex items-center justify-center shadow-xs ${div.iconBg}`}
+                    >
+                      <MainIcon className="w-8 h-8" />
+                    </div>
+
+                    <a
+                      href={div.portalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold transition-colors"
+                      title={`Open ${div.portalDomain}`}
+                    >
+                      <span className="truncate max-w-[140px]">{div.portalDomain}</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
                   </div>
 
+                  <span className={`text-xs uppercase tracking-wider font-bold ${div.accentColor}`}>
+                    {div.number}
+                  </span>
+                  <h3 className="text-2xl font-bold text-slate-900 mt-1 group-hover:text-primary transition-colors">
+                    {div.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">{div.subtitle}</p>
+
+                  <div className="h-px w-full bg-slate-200 my-4" />
+
+                  <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3 block">
+                    Domain Capabilities:
+                  </span>
+                  <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-700">
+                    {div.capabilities.map((cap) => {
+                      const CapIcon = cap.icon;
+                      return (
+                        <li key={cap.label} className="flex items-center gap-2.5">
+                          <CapIcon className={`w-4 h-4 shrink-0 ${div.accentColor}`} />
+                          <span className="font-medium">{cap.label}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="mt-8 pt-4 border-t border-slate-100 flex flex-col gap-2.5">
                   <a
                     href={div.portalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold transition-colors"
-                    title={`Open ${div.portalDomain}`}
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-900 text-white hover:bg-primary text-xs sm:text-sm font-semibold transition-all shadow-xs group/btn"
                   >
-                    <span className="truncate max-w-[140px]">{div.portalDomain}</span>
-                    <span className="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    <span>{div.portalButtonText}</span>
+                    <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                   </a>
+
+                  <button
+                    type="button"
+                    onClick={() => handleSelectRfq(div.id)}
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold transition-all cursor-pointer"
+                  >
+                    <FileText className="w-3.5 h-3.5 text-primary" />
+                    <span>Request Proposal for this Division</span>
+                  </button>
                 </div>
-
-                <span className={`text-xs uppercase tracking-wider font-bold ${div.accentColor}`}>
-                  {div.number}
-                </span>
-                <h3 className="text-2xl font-bold text-slate-900 mt-1 group-hover:text-primary transition-colors">
-                  {div.title}
-                </h3>
-                <p className="text-sm text-slate-600 mt-2 leading-relaxed">{div.subtitle}</p>
-
-                <div className="h-px w-full bg-slate-200 my-4" />
-
-                <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-3 block">
-                  Domain Capabilities:
-                </span>
-                <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-700">
-                  {div.capabilities.map((cap) => (
-                    <li key={cap.label} className="flex items-center gap-2.5">
-                      <span className={`material-symbols-outlined text-[18px] ${div.accentColor}`}>
-                        {cap.icon}
-                      </span>
-                      <span className="font-medium">{cap.label}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-
-              {/* Action Buttons: Direct Portal Launch + Local Proposal Request */}
-              <div className="mt-8 pt-4 border-t border-slate-100 flex flex-col gap-2.5">
-                <a
-                  href={div.portalUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-900 text-white hover:bg-primary text-xs sm:text-sm font-semibold transition-all shadow-xs group/btn"
-                >
-                  <span>{div.portalButtonText}</span>
-                  <span className="material-symbols-outlined text-[16px] group-hover/btn:translate-x-0.5 transition-transform">
-                    arrow_outward
-                  </span>
-                </a>
-
-                <button
-                  type="button"
-                  onClick={() => handleSelectRfq(div.id)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold transition-all"
-                >
-                  <span className="material-symbols-outlined text-[16px] text-primary">
-                    assignment
-                  </span>
-                  <span>Request Proposal for this Division</span>
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
