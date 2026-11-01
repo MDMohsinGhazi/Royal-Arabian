@@ -104,14 +104,7 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
               </button>
 
               <a href="#overview" className="flex items-center gap-3 group">
-                <div className="h-10 px-2.5 py-1 rounded-lg bg-slate-900 flex items-center justify-center shadow-sm">
-                  <div className="flex items-center gap-1.5">
-                    <Network className="w-5 h-5 text-white" />
-                    <span className="text-white font-extrabold text-sm tracking-widest uppercase">
-                      RACT
-                    </span>
-                  </div>
-                </div>
+                
                 <div className="flex flex-col">
                   <span className="text-lg text-slate-900 tracking-tight leading-none font-bold group-hover:text-primary transition-colors">
                     Royal Arabian
@@ -149,22 +142,7 @@ export default function EnterpriseHeader({ activeSection }: EnterpriseHeaderProp
             </nav>
 
             {/* Right CTAs */}
-            <div className="flex items-center gap-3 shrink-0">
-              <a
-                href="#quick-inquiry"
-                className="hidden sm:inline-flex items-center justify-center text-xs font-semibold px-5 py-2.5 rounded-lg bg-primary text-white hover:bg-amber-active transition-all duration-200 shadow-sm tracking-wide"
-              >
-                Request SLA Proposal
-              </a>
-
-              <a
-                href="tel:+971544443635"
-                title="24/7 Field Hotline: +971 54 4443635"
-                className="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-orange-50 hover:text-primary transition-colors shadow-inner"
-              >
-                <AlertTriangle className="w-4 h-4 text-primary" />
-              </a>
-            </div>
+          
           </div>
         </div>
       </header>
