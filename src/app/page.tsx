@@ -1,54 +1,62 @@
 "use client";
 
-import { useState } from "react";
-import EnterpriseHeader from "@/components/EnterpriseHeader";
-import EnterpriseHero from "@/components/EnterpriseHero";
-import EnterpriseTelemetryRibbon from "@/components/EnterpriseTelemetryRibbon";
-import EnterpriseDivisions from "@/components/EnterpriseDivisions";
-import EnterpriseArchitectureMatrix from "@/components/EnterpriseArchitectureMatrix";
-import EnterpriseAiFacilities from "@/components/EnterpriseAiFacilities";
-import EnterpriseClients from "@/components/EnterpriseClients";
-import EnterpriseConsultationModule from "@/components/EnterpriseConsultationModule";
-import EnterpriseFooter from "@/components/EnterpriseFooter";
+import TransitHeader from "@/components/transit/TransitHeader";
+import TransitHeroSlider from "@/components/transit/TransitHeroSlider";
+import TransitAbout from "@/components/transit/TransitAbout";
+import TransitFunFacts from "@/components/transit/TransitFunFacts";
+import TransitServices from "@/components/transit/TransitServices";
+import TransitSolutions from "@/components/transit/TransitSolutions";
+import TransitDivisions from "@/components/transit/TransitDivisions";
+import TransitMarquee from "@/components/transit/TransitMarquee";
+import TransitFaq from "@/components/transit/TransitFaq";
+import TransitContact from "@/components/transit/TransitContact";
+import TransitFooter from "@/components/transit/TransitFooter";
 
 export default function Home() {
-  const [selectedDivision, setSelectedDivision] = useState<"ict" | "cyber" | "smart">("ict");
-
-  const handleSelectDivision = (division: "smart" | "ict" | "cyber") => {
-    setSelectedDivision(division);
+  const handleOpenConsultation = () => {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-surface font-sans text-on-surface antialiased">
-      {/* Top Fixed Header with Global Presence and Navigation */}
-      <EnterpriseHeader />
+    <div className="min-h-screen flex flex-col bg-[#050505] font-sans text-zinc-100 antialiased selection:bg-orange-500 selection:text-white">
+      {/* Top Fixed Header with Transit utility strip & navigation */}
+      <TransitHeader onOpenConsultation={handleOpenConsultation} />
 
       {/* Main Content */}
-      <main className="flex-1 w-full pt-28 bg-surface">
-        {/* Hero Section with Typography & Metrics Strip */}
-        <EnterpriseHero />
+      <main className="flex-1 w-full bg-[#050505]">
+        {/* Hero Slider Section */}
+        <TransitHeroSlider />
 
-        {/* Live Telemetry Status Ribbon */}
-        <EnterpriseTelemetryRibbon />
+        {/* Agency / About Us Section ("WE ARE ROYAL ARABIAN") */}
+        <TransitAbout />
 
-        {/* Three Specialized Core Divisions */}
-        <EnterpriseDivisions onSelectDivision={handleSelectDivision} />
+        {/* Quantifiable Impact & Fun Facts Metric Counters */}
+        <TransitFunFacts />
 
-        {/* Eliminate Vendor Fragmentation Architecture Matrix */}
-        <EnterpriseArchitectureMatrix />
+        {/* End-to-End Lifecycle Services Grid */}
+        <TransitServices />
 
-        {/* AI-Powered Smart Surveillance & Facilities */}
-        <EnterpriseAiFacilities />
+        {/* Core Solutions Showcase (ELV, ICT, AV, Life Safety) */}
+        <TransitSolutions />
 
-        {/* Valued Clients & Regional Footprint */}
-        <EnterpriseClients />
+        {/* Three Core Divisions Portals Gateway */}
+        <TransitDivisions />
 
-        {/* Direct Contact & SLA Consultation Request Module */}
-        <EnterpriseConsultationModule selectedDivision={selectedDivision} />
+        {/* Global Partners & UAE Clients Infinite Marquee */}
+        <TransitMarquee />
+
+        {/* Technical FAQ Accordion */}
+        <TransitFaq />
+
+        {/* "Talk to an Expert" Consultation Form & UAE Offices */}
+        <TransitContact />
       </main>
 
       {/* Dark Executive Footer */}
-      <EnterpriseFooter />
+      <TransitFooter />
     </div>
   );
 }
