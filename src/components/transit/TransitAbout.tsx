@@ -22,43 +22,46 @@ export default function TransitAbout() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#08080a] text-white border-b border-white/10">
+    <section id="about" className="py-24 bg-white text-zinc-900 border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Heading and Story */}
           <div className="lg:col-span-7 flex flex-col">
             {/* Tagline */}
-            <div className="inline-flex items-center gap-2 mb-4 font-condensed tracking-widest text-xs uppercase font-bold text-orange-500">
-              <span className="w-6 h-[2px] bg-orange-500" />
+            <div className="inline-flex items-center gap-2 mb-4 font-condensed tracking-widest text-xs uppercase font-bold text-orange-600">
+              <span className="w-6 h-[2px] bg-orange-600" />
               <span>WE ARE ROYAL ARABIAN</span>
             </div>
 
-            <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold tracking-tight uppercase text-white leading-tight mb-6">
+            <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold tracking-tight uppercase text-zinc-950 leading-tight mb-6">
               TRANSFORMING UAE ENTERPRISE SPACES THROUGH INTELLIGENT TECHNOLOGY INTEGRATION
             </h2>
 
-            <p className="text-zinc-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
-              Headquartered in Abu Dhabi with regional operations in Dubai, <strong className="text-white">Royal Arabian Smart Technologies LLC</strong> is a premier system integrator and engineering firm. We engineer resilient ELV systems, enterprise ICT infrastructure, smart building automation, and high-assurance cybersecurity architectures.
+            <p className="text-zinc-700 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+              Headquartered in Abu Dhabi with regional operations in Dubai, <strong className="text-zinc-950">Royal Arabian Smart Technologies LLC</strong> is a premier system integrator and engineering firm. We engineer resilient ELV systems, enterprise ICT infrastructure, smart building automation, and high-assurance cybersecurity architectures.
             </p>
 
-            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
               We empower government ministries, financial headquarters, luxury hospitality developments, healthcare institutes, and critical industrial infrastructure to operate securely, optimize energy footprint, and scale without vendor lock-in.
             </p>
 
             {/* Highlights List */}
-            <div className="space-y-5 mb-10">
+            <div className="space-y-4 mb-10">
               {highlights.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} className="flex items-start gap-4 p-4 bg-zinc-900/60 border border-white/5 hover:border-orange-500/30 transition-colors">
-                    <div className="p-2.5 bg-orange-600/10 text-orange-500 shrink-0">
+                  <div
+                    key={item.title}
+                    className="flex items-start gap-4 p-4 bg-zinc-50 border border-zinc-200 hover:border-orange-500 hover:bg-white hover:shadow-md transition-all duration-200"
+                  >
+                    <div className="p-2.5 bg-orange-100 text-orange-600 shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-condensed text-lg font-bold text-white uppercase tracking-wide">
+                      <h3 className="font-condensed text-lg font-bold text-zinc-950 uppercase tracking-wide">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-1 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-zinc-600 mt-1 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -81,7 +84,7 @@ export default function TransitAbout() {
 
           {/* Right Column: Key Accreditations & Experience Card */}
           <div className="lg:col-span-5">
-            <div className="relative p-8 bg-zinc-950 border border-white/10 shadow-2xl">
+            <div className="relative p-8 bg-zinc-950 text-white border border-zinc-800 shadow-2xl">
               {/* Corner Accent */}
               <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-orange-500 pointer-events-none" />
 

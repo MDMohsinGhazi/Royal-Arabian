@@ -46,22 +46,19 @@ export default function TransitFunFacts() {
   ];
 
   return (
-    <section className="py-20 bg-[#050505] text-white border-b border-white/10 relative overflow-hidden">
-      {/* Background Subtle Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-950/10 via-transparent to-orange-950/10 pointer-events-none" />
-
+    <section className="py-20 bg-zinc-50 text-zinc-900 border-b border-zinc-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <div className="font-condensed text-xs uppercase tracking-widest text-orange-500 font-bold mb-2">
+            <div className="font-condensed text-xs uppercase tracking-widest text-orange-600 font-bold mb-2">
               QUANTIFIABLE IMPACT &amp; SCALE
             </div>
-            <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold uppercase text-white tracking-tight">
+            <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold uppercase text-zinc-950 tracking-tight">
               PROVEN RESULTS. MEASURABLE EXCELLENCE.
             </h2>
           </div>
-          <p className="text-zinc-400 text-sm max-w-md font-normal leading-relaxed">
+          <p className="text-zinc-600 text-sm max-w-md font-normal leading-relaxed">
             Our benchmarks reflect decades of operational dedication to engineering integrity, safety regulations, and client trust across the United Arab Emirates.
           </p>
         </div>
@@ -73,23 +70,23 @@ export default function TransitFunFacts() {
             return (
               <div
                 key={fact.label}
-                className="p-6 bg-[#0c0c0e] border border-white/10 hover:border-orange-500/60 transition-all duration-300 group flex flex-col justify-between"
+                className="p-6 bg-white border border-zinc-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="p-2 bg-orange-600/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-black transition-colors">
+                    <span className="p-2 bg-orange-50 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                       <Icon className="w-5 h-5" />
                     </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500/60" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
                   </div>
-                  <div className="font-condensed text-4xl sm:text-5xl font-extrabold text-white tracking-tight group-hover:text-orange-500 transition-colors">
+                  <div className="font-condensed text-4xl sm:text-5xl font-extrabold text-zinc-950 tracking-tight group-hover:text-orange-600 transition-colors">
                     {fact.value}
                   </div>
-                  <h3 className="font-condensed text-sm font-bold uppercase tracking-wider text-zinc-300 mt-2 mb-3">
+                  <h3 className="font-condensed text-sm font-bold uppercase tracking-wider text-zinc-800 mt-2 mb-3">
                     {fact.label}
                   </h3>
                 </div>
-                <p className="text-xs text-zinc-400 leading-relaxed pt-3 border-t border-white/5">
+                <p className="text-xs text-zinc-500 leading-relaxed pt-3 border-t border-zinc-100">
                   {fact.desc}
                 </p>
               </div>
@@ -98,20 +95,20 @@ export default function TransitFunFacts() {
         </div>
 
         {/* Certifications Badge Strip */}
-        <div className="mt-14 pt-10 border-t border-white/10">
-          <div className="text-center font-condensed text-xs uppercase tracking-widest text-zinc-400 mb-6 font-semibold">
+        <div className="mt-14 pt-10 border-t border-zinc-200">
+          <div className="text-center font-condensed text-xs uppercase tracking-widest text-zinc-500 mb-6 font-semibold">
             OFFICIALLY ACCREDITED &amp; COMPLIANT WITH UAE REGULATORY BODIES
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {certifications.map((cert) => (
               <div
                 key={cert.name}
-                className="p-3 bg-zinc-950/80 border border-white/10 text-center hover:border-orange-500/40 transition-colors"
+                className="p-3 bg-white border border-zinc-200 text-center hover:border-orange-500 hover:shadow-sm transition-colors"
               >
-                <div className="font-condensed text-sm font-bold text-white tracking-wide">
+                <div className="font-condensed text-sm font-bold text-zinc-950 tracking-wide">
                   {cert.name}
                 </div>
-                <div className="text-[10px] text-orange-400 uppercase tracking-wider font-mono mt-0.5">
+                <div className="text-[10px] text-orange-600 uppercase tracking-wider font-mono mt-0.5">
                   {cert.tag}
                 </div>
               </div>

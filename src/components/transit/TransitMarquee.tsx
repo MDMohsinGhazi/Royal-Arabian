@@ -32,20 +32,20 @@ export default function TransitMarquee() {
   ];
 
   return (
-    <section className="py-20 bg-[#050505] text-white border-b border-white/10 overflow-hidden">
+    <section className="py-20 bg-white text-zinc-900 border-b border-zinc-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="font-condensed text-xs uppercase tracking-widest text-orange-500 font-bold mb-2 flex items-center gap-2">
+            <div className="font-condensed text-xs uppercase tracking-widest text-orange-600 font-bold mb-2 flex items-center gap-2">
               <Handshake className="w-4 h-4" />
               <span>GLOBAL ALLIANCES &amp; CLIENT TRUST</span>
             </div>
-            <h2 className="font-condensed text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-tight">
+            <h2 className="font-condensed text-3xl sm:text-4xl font-extrabold uppercase text-zinc-950 tracking-tight">
               BACKED BY INDUSTRY LEADERS, TRUSTED BY UAE ICONS
             </h2>
           </div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
-            <ShieldCheck className="w-4 h-4 text-orange-500" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 border border-zinc-200 text-xs font-mono text-zinc-700">
+            <ShieldCheck className="w-4 h-4 text-orange-600" />
             <span>100% GENUINE OEM HARDWARE &amp; LOCAL WARRANTIES</span>
           </div>
         </div>
@@ -54,22 +54,22 @@ export default function TransitMarquee() {
       {/* Row 1: Global Technology Partners Marquee */}
       <div className="mb-8">
         <div className="px-6 max-w-7xl mx-auto mb-3">
-          <span className="font-condensed text-xs uppercase tracking-wider text-zinc-400 font-semibold">
+          <span className="font-condensed text-xs uppercase tracking-wider text-zinc-500 font-semibold">
             GLOBAL TECHNOLOGY PARTNERS
           </span>
         </div>
-        <div className="relative w-full overflow-hidden py-3 bg-[#0a0a0d] border-y border-white/5">
+        <div className="relative w-full overflow-hidden py-3 bg-zinc-50 border-y border-zinc-200">
           <div className="animate-marquee flex items-center gap-6">
             {[...partners, ...partners].map((p, idx) => (
               <div
                 key={`partner-${p.name}-${idx}`}
-                className="flex items-center gap-3 px-6 py-3 bg-zinc-900/60 border border-white/10 hover:border-orange-500/50 transition-colors shrink-0"
+                className="flex items-center gap-3 px-6 py-3 bg-white border border-zinc-200 hover:border-orange-500 hover:shadow-sm transition-colors shrink-0"
               >
-                <span className="font-condensed text-lg font-bold text-white tracking-wider">
+                <span className="font-condensed text-lg font-bold text-zinc-950 tracking-wider">
                   {p.name}
                 </span>
-                <span className="w-1 h-1 rounded-full bg-orange-500" />
-                <span className="font-mono text-[10px] text-zinc-400 uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                <span className="font-mono text-[10px] text-zinc-500 uppercase">
                   {p.role}
                 </span>
               </div>
@@ -81,11 +81,11 @@ export default function TransitMarquee() {
       {/* Row 2: Valued Enterprise Clients Marquee */}
       <div>
         <div className="px-6 max-w-7xl mx-auto mb-3">
-          <span className="font-condensed text-xs uppercase tracking-wider text-zinc-400 font-semibold">
+          <span className="font-condensed text-xs uppercase tracking-wider text-zinc-500 font-semibold">
             VALUED CLIENT DEPLOYMENTS ACROSS UAE
           </span>
         </div>
-        <div className="relative w-full overflow-hidden py-3 bg-[#0a0a0d] border-y border-white/5">
+        <div className="relative w-full overflow-hidden py-3 bg-zinc-50 border-y border-zinc-200">
           <div
             className="animate-marquee flex items-center gap-6"
             style={{ animationDirection: "reverse", animationDuration: "40s" }}
@@ -93,13 +93,13 @@ export default function TransitMarquee() {
             {[...clients, ...clients].map((c, idx) => (
               <div
                 key={`client-${c.name}-${idx}`}
-                className="flex items-center gap-3 px-6 py-3 bg-zinc-900/60 border border-white/10 hover:border-orange-500/50 transition-colors shrink-0"
+                className="flex items-center gap-3 px-6 py-3 bg-white border border-zinc-200 hover:border-orange-500 hover:shadow-sm transition-colors shrink-0"
               >
-                <span className="font-condensed text-lg font-bold text-white tracking-wider">
+                <span className="font-condensed text-lg font-bold text-zinc-950 tracking-wider">
                   {c.name}
                 </span>
-                <span className="w-1 h-1 rounded-full bg-orange-500" />
-                <span className="font-mono text-[10px] text-zinc-400 uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                <span className="font-mono text-[10px] text-zinc-500 uppercase">
                   {c.sector}
                 </span>
               </div>

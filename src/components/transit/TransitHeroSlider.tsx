@@ -87,7 +87,7 @@ export default function TransitHeroSlider() {
 
   return (
     <section
-      className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-24 pb-16"
+      className="relative min-h-[88vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-28 lg:pt-36 pb-20"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label="Hero Highlights"
@@ -133,7 +133,7 @@ export default function TransitHeroSlider() {
               <span>TALK TO AN EXPERT</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#solutions" className="transit-btn-outline group">
+            <a href="#solutions" className="transit-btn-outline-white group">
               <span>OUR SOLUTIONS</span>
             </a>
           </div>

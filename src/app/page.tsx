@@ -21,12 +21,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#050505] font-sans text-zinc-100 antialiased selection:bg-orange-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white font-sans text-zinc-900 antialiased selection:bg-orange-500 selection:text-white">
       {/* Top Fixed Header with Transit utility strip & navigation */}
       <TransitHeader onOpenConsultation={handleOpenConsultation} />
 
       {/* Main Content */}
-      <main className="flex-1 w-full bg-[#050505]">
+      <main className="flex-1 w-full bg-white">
         {/* Hero Slider Section */}
         <TransitHeroSlider />
 

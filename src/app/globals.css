@@ -6,10 +6,10 @@
   --color-primary-dark: #c2410c;
   --color-on-primary: #ffffff;
 
-  --color-surface: #050505;
-  --color-surface-card: #0c0c0e;
-  --color-surface-card-hover: #141418;
-  --color-surface-border: rgba(255, 255, 255, 0.1);
+  --color-surface: #ffffff;
+  --color-surface-card: #f8fafc;
+  --color-surface-card-hover: #f1f5f9;
+  --color-surface-border: #e2e8f0;
 
   --font-condensed: var(--font-condensed);
   --font-hanken: var(--font-hanken);
@@ -24,12 +24,12 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
-    background-color: #050505;
-    color: #f4f4f5;
+    background-color: #ffffff;
+    color: #18181b;
   }
   body {
-    background-color: #050505;
-    color: #e4e4e7;
+    background-color: #ffffff;
+    color: #27272a;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
   }
@@ -92,10 +92,33 @@
 
 .transit-btn:hover {
   background-color: #ea580c;
-  box-shadow: 0 0 20px rgba(255, 85, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.35);
 }
 
 .transit-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #18181b;
+  font-family: var(--font-condensed), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0;
+  border: 1px solid #27272a;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.transit-btn-outline:hover {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+.transit-btn-outline-white {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -113,7 +136,7 @@
   cursor: pointer;
 }
 
-.transit-btn-outline:hover {
+.transit-btn-outline-white:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: #ffffff;
 }

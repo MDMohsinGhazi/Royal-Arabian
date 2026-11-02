@@ -38,25 +38,25 @@ export default function TransitFaq() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#08080a] text-white border-b border-white/10">
+    <section id="faq" className="py-24 bg-white text-zinc-900 border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Left Column: Heading & Support Info */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="font-condensed text-xs uppercase tracking-widest text-orange-500 font-bold mb-2 flex items-center gap-2">
+              <div className="font-condensed text-xs uppercase tracking-widest text-orange-600 font-bold mb-2 flex items-center gap-2">
                 <HelpCircle className="w-4 h-4" />
                 <span>FREQUENTLY ASKED QUESTIONS</span>
               </div>
-              <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold uppercase text-white tracking-tight mb-6">
+              <h2 className="font-condensed text-3xl sm:text-5xl font-extrabold uppercase text-zinc-950 tracking-tight mb-6">
                 CLEAR ANSWERS FOR ENTERPRISE DECISION MAKERS
               </h2>
-              <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed mb-8">
                 Find answers to common questions regarding our UAE regulatory compliance, project delivery frameworks, multi-vendor support, and warranty coverage.
               </p>
             </div>
 
-            <div className="p-6 bg-zinc-950 border border-white/10">
+            <div className="p-6 bg-zinc-950 text-white border border-zinc-800 shadow-xl">
               <div className="font-condensed text-lg font-bold text-white uppercase mb-2">
                 HAVE A SPECIFIC TENDER OR RFP?
               </div>
@@ -77,24 +77,24 @@ export default function TransitFaq() {
               return (
                 <div
                   key={faq.q}
-                  className="bg-[#0c0c0e] border border-white/10 transition-colors duration-200 overflow-hidden"
+                  className="bg-zinc-50 border border-zinc-200 hover:border-orange-500 transition-colors duration-200 overflow-hidden shadow-sm"
                 >
                   <button
                     type="button"
                     onClick={() => toggleFaq(idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 group"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 group bg-zinc-50"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-condensed text-lg sm:text-xl font-bold uppercase text-white tracking-wide group-hover:text-orange-500 transition-colors">
+                    <span className="font-condensed text-lg sm:text-xl font-bold uppercase text-zinc-950 tracking-wide group-hover:text-orange-600 transition-colors">
                       {faq.q}
                     </span>
-                    <span className="p-2 bg-zinc-900 text-zinc-400 group-hover:text-orange-500 shrink-0 transition-colors">
+                    <span className="p-2 bg-white border border-zinc-200 text-zinc-700 group-hover:text-orange-600 shrink-0 transition-colors">
                       {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </span>
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-6 pt-1 text-zinc-400 text-sm leading-relaxed border-t border-white/5">
+                    <div className="px-5 pb-6 pt-3 text-zinc-600 text-sm leading-relaxed bg-white border-t border-zinc-200">
                       {faq.a}
                     </div>
                   )}
